@@ -1,3 +1,3 @@
-# https://github.com/AugustBergmannS/GudjonOgAgust
+# https://augustbergmanns.github.io/GudjonOgAgust/
 Lokaverkefni
 [Hi There](/index.html)
