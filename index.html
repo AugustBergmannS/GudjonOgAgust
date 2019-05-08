@@ -2,59 +2,77 @@
 layout: default
 title: Home
 ---
-<header><h1>Hello World!<img class="tabby" src="img/tabby_cat.svg"></h1></header>
-<section class="content" >
-    <section class="vinstri">
-        <h2>Aðaldálkur</h2>
-        <p>Responsive Web Design makes your web page look good on all devices (desktops, tablets, and phones). Responsive Web Design is about using CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen. </p>
-        <section class="myndabox">
-            <figure class="einn"><img src="img/mynd-1.jpg"></figure>
-            <figure class="tveir"><img src="img/mynd-2.jpg"></figure>
-            <figure class="trir"><img src="img/mynd-3.jpg"></figure>
-            <figure class="fjorir"><img src="img/mynd-4.jpg"></figure>
-        </section>
-        <table>
-            <caption>Statement Summary</caption>
-            <thead>
-                <tr>
-                <th scope="col"></th>
-                <th scope="col">Forritun</th>
-                <th scope="col">Vefþróun</th>
-                <th scope="col">Tölvutækni</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td data-label="">1 önn.</td>
-                <td data-label="Forritun">FORR1FG05AU</td>
-                <td data-label="Vefþróun">VEFÞ1VG05AU</td>
-                <td data-label="Tölvutækni">KEST1TR05AU</td>
-                </tr>
-                <tr>
-                <td data-label="">2 önn.</td>
-                <td scope="row" data-label="Forritun">FORR2FA05BU</td>
-                <td data-label="Vefþróun">VEFÞ2VH05BU</td>
-                <td data-label="Tölvutækni<">KEST2VJ05BU</td>
-                </tr>
-                <tr>
-                <td data-label="">3 önn.</td>
-                <td scope="row" data-label="Forritun">FORR2HF05CU</td>
-                <td data-label="Vefþróun">VEFÞ2VF05CU</td>
-                <td data-label="Tölvutækni<">KEST2UN05CU</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <section class="midja">
-        <div id="hreyfing">
-            <img class="bottom" src="img/bjarnibenshrek.jpg">
-            <img class="top" src="img/random_mynd.jpg">
-        </div>
-        <img class="orange" src="img/orange.jpg">
-        <p>Hér og bara hér getur þú fengið appelsínu</p>
-        <a href="https://www.amazon.com/produce-aisle-mburring-Orange-Medium/dp/B000SE9NUG">Smeltu hér fyrir appelsínu ( ͡° ͜ʖ ͡° ) </a>>
-    </section>
-</section>
-<footer>
-    <h3>Fótur</h3>
-</footer>
+<h1>{{ "Hello World!" | downcase }}</h1>
+<picture class="mynd">
+    <source srcset="assets/img/peter.JPG" media="(max-width:500px)">
+    <source srcset="assets/img/jesus.jpg" media="(max-width:1000px)">
+    <img src="assets/img/jesus.jpg">
+  </picture>
+  <table>
+    <caption>Skemmtilegt fólk</caption>
+    <thead>
+      <tr>
+        <th scope="col">Nafn</th>
+        <th scope="col">Afmælisdagur</th>
+        <th scope="col">Fæðingarár</th>
+        <th scope="col">Þjóð</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Nafn">Nonni</td>
+        <td data-label="Afmælisdagur">2 Október</td>
+        <td data-label="Fæðingarár">1998</td>
+        <td data-label="UÞjóð">Ísland</td>
+      </tr>
+      <tr>
+        <td data-label="Nafn">Thierry Henry</td>
+        <td data-label="Afmælisdagur">17 Ágúst</td>
+        <td data-label="Fæðingarár">1977</td>
+        <td data-label="Þjóð">Frakkland</td>
+      </tr>
+      <tr>
+        <td data-label="Nafn">Ronaldo</td>
+        <td data-label="Afmælisdagur">22 September</td>
+        <td data-label="Fæðingarár">1976</td>
+        <td data-label="Þjóð">Brasilía</td>
+      </tr>
+      <tr>
+        <td data-label="Nafn">Dennis Bergkamp</td>
+        <td data-label="Afmælisdagur">10 Maí</td>
+        <td data-label="Fæðingarár">1969</td>
+        <td data-label="Þjóð">Hólland</td>
+      </tr>
+    </tbody>
+</table>
+<div class="formid">
+  <form action="" >
+    <fieldset>
+      <legend>Bæta Við?:</legend>
+      Fyrsta nafn:<br>
+      <textarea name="message" rows="1" cols="20"></textarea><br>
+      Email:<br>
+      <textarea name="message" rows="1" cols="20"></textarea><br>
+      Kyn:<br>
+      <input type="checkbox" name="kyn1" value="karl"> Karl<br>
+      <input type="checkbox" name="kyn2"value="kona"> Kona<br>
+      <input type="checkbox" name="kyn3" value="annad"> Annað<br>
+      Það sem ég geri:<br>
+      <input type="radio" name="vinna" value="vinna"> vinnu<br>
+      <input type="radio" name="vinna" value="skoli" checked> skóla<br>
+      <input type="radio" name="vinna" value="atvinnulaus"> atvinnulaus<br>
+      Hvað langar þér að vinna við?<br>
+      <select name="spurning">
+        <option value="leikari">Leikari</option>
+        <option value="forritari">Forritari</option>
+        <option value="slokkvilidsmaður">Slökkviliðsmaður</option>
+        <option value="flugmadur">Flugmaður</option>
+        <option value="kennari">Kennari</option>
+        <option value="atvinnurekandi">Atvinnurekandi</option>
+      </select><br>
+      Ef þú vilt bæta einhverju við:<br>
+      <textarea name="message" rows="4" cols="50"></textarea><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
